@@ -1,0 +1,199 @@
+/* 🌟 Fullscreen clean layout */
+.chatbot-wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #f7f7f7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 🏠 Title */
+.chatbot-title {
+  color: #ff6b00;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* 💬 Chat container */
+.chat-window {
+  width: 90%;
+  max-width: 750px;
+  height: 70vh;
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(6px);
+  border-radius: 22px;
+  padding: 20px;
+  overflow-y: auto;
+  box-shadow: 0 4px 35px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  animation: fadeSlideUp 0.5s ease;
+  scroll-behavior: smooth;
+}
+
+/* 🗨️ Message bubbles */
+.message-bubble {
+  max-width: 80%;
+  padding: 14px 18px;
+  margin: 10px 0;
+  border-radius: 18px;
+  font-size: 1rem;
+  line-height: 1.45;
+  word-wrap: break-word;
+  animation: bubbleFadeIn 0.4s ease;
+}
+
+/* 👤 User message bubble */
+.message-bubble.user {
+  align-self: flex-end;
+  background: #007bff;
+  color: white;
+  border-bottom-right-radius: 6px;
+  box-shadow: 0 3px 15px rgba(0, 123, 255, 0.35);
+}
+
+/* 🤖 Bot message bubble */
+.message-bubble.bot {
+  align-self: flex-start;
+  background: #1a1a1a;
+  color: #f1f1f1;
+  border-bottom-left-radius: 6px;
+  box-shadow: 0 3px 12px rgba(255, 255, 255, 0.08);
+}
+
+/* 🖼️ Images inside chat */
+.chat-image-container {
+  margin-top: 10px;
+}
+
+.chat-image {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 14px;
+  margin-top: 8px;
+  box-shadow: 0px 4px 14px rgba(255, 255, 255, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.chat-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0px 6px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* ✏️ Input area */
+.chat-input-bar {
+  width: 90%;
+  max-width: 750px;
+  display: flex;
+  margin-top: 22px;
+}
+
+/* 📝 Input field */
+.chat-input {
+  flex: 1;
+  padding: 16px;
+  border: 2px solid transparent;
+  border-radius: 14px 0 0 14px;
+  background: #fff;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chat-input:focus {
+  border-color: #ff6b00;
+  box-shadow: 0px 0px 10px rgba(255, 107, 0, 0.3);
+}
+
+/* ▶ Send button */
+.send-btn {
+  padding: 16px 26px;
+  border: none;
+  border-radius: 0 14px 14px 0;
+  background: #ff6b00;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.send-btn:hover {
+  background: #ffa45b;
+  transform: scale(1.03);
+}
+
+.send-btn:active {
+  transform: scale(0.97);
+}
+
+/* 🌈 Custom scrollbar */
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0);
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 8px;
+}
+
+/* ⌛ Typing indicator */
+.typing-bubble {
+  align-self: flex-start;
+  display: flex;
+  gap: 5px;
+  padding: 10px 14px;
+  background: #1e1e1e;
+  border-radius: 12px;
+  margin: 8px 0;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+}
+
+.typing-dot {
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border-radius: 50%;
+  animation: blink 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+/* 🌟 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bubbleFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes blink {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+

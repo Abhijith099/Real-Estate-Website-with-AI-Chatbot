@@ -1,0 +1,56 @@
+[
+  {
+    "name": "Skyline Serenity Villa",
+    "price": "14,20,00,000",
+    "detail": "JP Nagar, Bengaluru, Karnataka",
+    "image": "./r1.png"
+  },
+  {
+    "name": "Indiranagar Platinum Residency",
+    "price": "15,80,00,000",
+    "detail": "Indiranagar, Bengaluru, Karnataka",
+    "image": "./r2.png"
+  },
+  {
+    "name": "Whitefield Royal Estate",
+    "price": "16,90,00,000",
+    "detail": "Whitefield, Bengaluru, Karnataka",
+    "image": "./r3.png"
+  },
+  {
+    "name": "The Green Horizon Villa",
+    "price": "13,20,00,000",
+    "detail": "Sarjapur Road, Bengaluru, Karnataka",
+    "image": "./r1.png"
+  },
+  {
+    "name": "The Oberon Mansion",
+    "price": "15,50,00,000",
+    "detail": "Koramangala, Bengaluru, Karnataka",
+    "image": "./r2.png"
+  },
+  {
+    "name": "Prestige Palm Manor",
+    "price": "14,90,00,000",
+    "detail": "Yelahanka, Bengaluru, Karnataka",
+    "image": "./r3.png"
+  },
+  {
+    "name": "Palmcrest Elite Villa",
+    "price": "16,80,00,000",
+    "detail": "HSR Layout, Bengaluru, Karnataka",
+    "image": "./r1.png"
+  },
+  {
+    "name": "Summerhill Estate",
+    "price": "12,30,00,000",
+    "detail": "Jayanagar, Bengaluru, Karnataka",
+    "image": "./r2.png"
+  },
+  {
+    "name": "Crimson Peak Chalet",
+    "price": "11,90,00,000",
+    "detail": "Electronic City, Bengaluru, Karnataka",
+    "image": "./r3.png"
+  }
+]

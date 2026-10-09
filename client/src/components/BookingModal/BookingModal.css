@@ -1,0 +1,82 @@
+/* 🧡 Modal background and layout */
+.booking-modal .mantine-Modal-content {
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  font-family: "Poppins", sans-serif;
+}
+
+.modal-title {
+  color: #ff6b00;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+/* 📅 Calendar styling */
+.custom-datepicker {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fafafa;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  padding: 10px;
+}
+
+.custom-datepicker .mantine-DatePicker-calendar {
+  background: #fff;
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* 🗓️ Day styling */
+.custom-datepicker .mantine-DatePicker-day {
+  color: #333;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.custom-datepicker .mantine-DatePicker-day:hover {
+  background-color: #ffefe2;
+  color: #ff6b00;
+  transform: scale(1.05);
+}
+
+/* 📍 Selected date */
+.custom-datepicker .mantine-DatePicker-day[data-selected] {
+  background-color: #ff6b00;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* 📘 Today highlight */
+.custom-datepicker .mantine-DatePicker-day[data-today] {
+  border: 1px solid #ff6b00;
+  color: #ff6b00;
+}
+
+/* ⬆️⬇️ Month arrows */
+.custom-datepicker button {
+  color: #ff6b00;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.custom-datepicker button:hover {
+  color: #ffa45b;
+  transform: scale(1.15);
+}
+
+/* 🧡 Book button */
+.book-btn {
+  background-color: #ff6b00 !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  margin-top: 1rem;
+  transition: background 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #ff8533 !important;
+}
