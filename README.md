@@ -1,80 +1,102 @@
-# 🏡 Homyz — Real Estate Website with AI Chatbot
+# Real Estate Platform with AI Assistant
 
-A modern, full-stack real estate platform that combines sleek property discovery with a Google Gemini-powered AI chatbot. Users can explore premium residencies, search and filter listings dynamically, view interactive geographical maps, book property visits, and chat with an intelligent AI assistant capable of smart property matching.
+A full-stack real estate web application integrating property discovery, interactive geographical mapping, visit scheduling, and an AI-driven conversational assistant powered by Google Gemini.
 
 ---
 
-## 📸 Screenshots & Demo
+## Overview
 
-### 1. Landing Page & Hero Section
+Homyz provides a modern interface for users to browse, search, and manage residential property listings. The platform incorporates an intelligent assistant capable of understanding natural language search queries, filtering real estate listings dynamically based on location, budget, and amenities, and answering user inquiries in real time.
+
+---
+
+## User Interface
+
+### Home Page
 ![Hero Section](./screenshots/01-hero-landing.png)
 
-### 2. Popular Residencies Carousel
-![Popular Residencies](./screenshots/02-popular-residencies.png)
+### Featured Residencies
+![Featured Residencies](./screenshots/02-popular-residencies.png)
 
-### 3. All Properties Search & Exploration
-![Properties Grid](./screenshots/03-property-listings.png)
+### Property Catalog & Search
+![Property Catalog](./screenshots/03-property-listings.png)
 
-### 4. Property Details & Interactive Leaflet Map
-![Property Details & Map](./screenshots/04-property-details-map.png)
+### Property Detail View & Geolocation
+![Property Detail View](./screenshots/04-property-details-map.png)
 
-### 5. Contact & AI Chatbot Assistant
-![Contact and AI Chat](./screenshots/05-contact-and-ai-chat.png)
-
----
-
-## ✨ Key Features
-
-- 🔍 **Dynamic Property Search**: Filter listings by title, city, or country instantly.
-- 🤖 **Google Gemini AI Assistant**: Built-in chatbot powered by Gemini API that understands natural language queries (e.g., *"Show me coffee estates in Chikmagalur"*, *"Find beach villas under 1.5 Cr"*) and returns formatted property cards.
-- 🗺️ **Interactive Maps**: Real-time property geocoding and visual mapping using Leaflet.
-- 📅 **Visit Scheduling**: Book and manage property visits with a date picker.
-- ❤️ **Favorites / Wishlist**: Save favorite residencies tied to your authenticated profile.
-- ➕ **Add New Residencies**: Upload photos, enter facilities (bedrooms, bathrooms, parking), set locations, and publish listings.
-- 🔐 **Secure Authentication**: End-to-end user authentication with Auth0 (OAuth2 / JWT Bearer tokens).
+### Inquiry & AI Assistant
+![AI Assistant Integration](./screenshots/05-contact-and-ai-chat.png)
 
 ---
 
-## 🛠️ Tech Stack
+## Core Capabilities
 
-### Frontend (`/client`)
-- **Framework**: [React](https://reactjs.org/) (bootstrapped with [Vite](https://vitejs.dev/))
-- **UI Components**: [Mantine UI](https://mantine.dev/), [React Icons](https://react-icons.github.io/react-icons/)
-- **Sliders & Carousel**: [Swiper.js](https://swiperjs.com/)
-- **Maps**: [Leaflet](https://leafletjs.com/) & `react-leaflet`
-- **State & Data Fetching**: [React Query](https://tanstack.com/query), [Axios](https://axios-http.com/)
-- **Authentication**: [@auth0/auth0-react](https://auth0.com/docs/libraries/auth0-react)
-- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/)
-
-### Backend (`/server`)
-- **Runtime**: [Node.js](https://nodejs.org/) & [Express.js](https://expressjs.com/)
-- **Database & ORM**: [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) with [Prisma ORM](https://www.prisma.io/)
-- **AI Engine**: Google Gemini API (`gemini-2.5-flash` with automatic fallback)
-- **Auth & Security**: `express-oauth2-jwt-bearer` (RS256 JWT validation)
+- **Intelligent Property Search**: Real-time filtering by property title, municipality, or region.
+- **Conversational AI Integration**: An embedded assistant using Google Gemini API (`gemini-2.5-flash` with fallback routing) to interpret natural language property inquiries (e.g., specific property styles, regional requests, or budget constraints).
+- **Interactive Mapping**: Geographic visualization and dynamic location pinning using Leaflet and OpenStreetMap.
+- **Visit Scheduling**: Integrated calendar module allowing authenticated users to schedule and manage property walkthroughs.
+- **Favorites & Wishlist**: Persistent tracking of user-favorited listings tied to user profiles.
+- **Listing Management**: Form workflow for publishing new properties, including image uploads, structural details, and pricing.
+- **Identity & Access Management**: Secure user authentication and token-based API authorization via Auth0 (OAuth 2.0 / RS256 JWT validation).
 
 ---
 
-## 🚀 Getting Started
+## System Architecture & Tech Stack
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [MongoDB Atlas](https://www.mongodb.com/) account or local MongoDB instance
-- [Google AI Studio API Key](https://aistudio.google.com/app/apikey)
-- [Auth0](https://auth0.com/) account
+### Frontend Architecture
+- **Framework**: React 18, Vite
+- **Component Library**: Mantine Core
+- **Mapping & Geolocation**: Leaflet, React-Leaflet
+- **Carousels & Media**: Swiper.js
+- **State & Server Communication**: TanStack React Query, Axios
+- **Authentication**: Auth0 React SDK
+
+### Backend Architecture
+- **Runtime**: Node.js, Express.js
+- **Database & Data Modeling**: MongoDB Atlas, Prisma ORM
+- **AI Processing**: Google Generative AI (Gemini REST API)
+- **Security & Authorization**: Express OAuth2 JWT Bearer (`express-oauth2-jwt-bearer`)
 
 ---
 
-### 1. Clone the Repository
-```bash
-git clone https://github.com/Abhijith099/Real-Estate-Website-with-AI-Chatbot.git
-cd Real-Estate-Website-with-AI-Chatbot
+## Project Structure
+
+```
+├── client/                 # React frontend application
+│   ├── public/             # Static assets and branding
+│   ├── src/
+│   │   ├── components/     # Reusable UI components (Chatbot, Map, Cards, etc.)
+│   │   ├── hooks/          # Custom React hooks (Data fetching & auth checks)
+│   │   ├── pages/          # View routing (Home, Properties, Bookings, Favorites)
+│   │   └── utils/          # API layer and helper functions
+│   └── vite.config.js      # Vite build configuration
+│
+├── server/                 # Express backend API
+│   ├── config/             # Auth0 and Prisma client configurations
+│   ├── controllers/        # Route business logic (Residency and User handlers)
+│   ├── prisma/             # Database schema and migration specifications
+│   ├── routes/             # API routing endpoints (Chat, Residency, User)
+│   └── utils/              # Smart filtering engine and query helpers
+│
+└── screenshots/            # UI reference screenshots
 ```
 
 ---
 
-### 2. Backend Setup (`/server`)
+## Installation & Setup
 
-1. Navigate to the server folder:
+### Prerequisites
+- Node.js (version 18 or higher)
+- npm or yarn package manager
+- MongoDB Atlas account (or compatible MongoDB instance)
+- Google AI Studio API key
+- Auth0 developer account
+
+---
+
+### Backend Configuration
+
+1. Navigate to the server directory:
    ```bash
    cd server
    ```
@@ -84,36 +106,37 @@ cd Real-Estate-Website-with-AI-Chatbot
    npm install
    ```
 
-3. Create a `.env` file based on [.env.example](./server/.env.example):
+3. Configure environment variables:
+   Create a `.env` file in the `server` root following the provided template:
    ```bash
    cp .env.example .env
    ```
 
-4. Populate your `.env` variables:
+4. Populate `.env` with your deployment credentials:
    ```env
    PORT=8000
-   DATABASE_URL="mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/YourDB?retryWrites=true&w=majority"
-   GEMINI_API_KEY=your_gemini_api_key_here
-   AUTH0_AUDIENCE=http://localhost:8000
-   AUTH0_ISSUER_BASE_URL=https://<your-tenant>.auth0.com
+   DATABASE_URL="mongodb+srv://<username>:<password>@cluster0.example.mongodb.net/<dbname>?retryWrites=true&w=majority"
+   GEMINI_API_KEY="<your-google-gemini-api-key>"
+   AUTH0_AUDIENCE="http://localhost:8000"
+   AUTH0_ISSUER_BASE_URL="https://<your-auth0-domain>.auth0.com"
    ```
 
-5. Generate Prisma Client:
+5. Generate the Prisma database client:
    ```bash
    npx prisma generate
    ```
 
-6. Start the backend server:
+6. Start the development server:
    ```bash
    npm run dev
    ```
-   *The server runs on `http://localhost:8000`.*
+   The backend service starts at `http://localhost:8000`.
 
 ---
 
-### 3. Frontend Setup (`/client`)
+### Frontend Configuration
 
-1. Open a new terminal and navigate to client:
+1. Open a separate terminal and navigate to the client directory:
    ```bash
    cd client
    ```
@@ -123,21 +146,22 @@ cd Real-Estate-Website-with-AI-Chatbot
    npm install
    ```
 
-3. Start the Vite development server:
+3. Launch the Vite development server:
    ```bash
    npm run dev
    ```
-   *The client runs on `http://localhost:5173`.*
+   The application will be accessible at `http://localhost:5173`.
 
 ---
 
-## 🔒 Security & Environment Variables
+## Security Guidelines
 
-Never commit your `.env` files to Git. The project includes:
-- Root [`.gitignore`](./.gitignore) preconfigured to ignore `.env`, `node_modules`, and build files.
-- Safe template [`server/.env.example`](./server/.env.example) for easy setup.
+- Sensitive credentials (database connection strings, API keys, and authentication parameters) must never be committed to source control.
+- Ensure all deployment configurations utilize environment-specific variable injection.
+- Reference `.env.example` across environments for onboarding without exposing live secrets.
 
 ---
 
-## 📄 License
-This project is open-source and available under the [MIT License](LICENSE).
+## License
+
+This project is licensed under the MIT License.
