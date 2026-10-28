@@ -5,7 +5,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@google/generative-ai": "github:google/generative-ai-js",

@@ -12,7 +12,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       domain="dev-pimkwze13bc72sdk.eu.auth0.com"
       clientId="onB44LRlKsY0VTNnHQAvxmE1fcnowq7G"
       authorizationParams={{
-        redirect_uri: "http://localhost:5173",
+        redirect_uri: window.location.origin,
       }}
       audience="http://localhost:8000"
       scope="openid profile email"
