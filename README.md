@@ -4,6 +4,13 @@ A full-stack real estate web application integrating property discovery, interac
 
 ---
 
+## Live Demo
+
+- **Frontend (Vercel):** https://real-estate-website-with-ai-chatbot.vercel.app/
+- **Backend (Render):** https://real-estate-website-with-ai-chatbot.onrender.com
+
+The live deployment showcases the full platform with AI‑powered real‑estate search, mapping, and scheduling features.
+
 ## Overview
 
 Homyz provides a modern interface for users to browse, search, and manage residential property listings. The platform incorporates an intelligent assistant capable of understanding natural language search queries, filtering real estate listings dynamically based on location, budget, and amenities, and answering user inquiries in real time.
