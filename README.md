@@ -7,7 +7,7 @@ A full-stack real estate web application integrating property discovery, interac
 ## Live Demo
 
 - **Frontend (Vercel):** https://real-estate-website-with-ai-chatbot.vercel.app/
-- **Backend (Render):** https://real-estate-website-with-ai-chatbot.onrender.com
+- **Backend (Render):
 
 The live deployment showcases the full platform with AI‑powered real‑estate search, mapping, and scheduling features.
 
